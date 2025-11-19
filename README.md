@@ -345,9 +345,9 @@ Retrieve specific API endpoint details using exact operation identifiers for pre
 
 </details>
 
-## AI Agents for Enhanced Development
+## AI Agents for Enhanced Development (Experimental)
 
-This MCP server includes specialized AI agents that provide intelligent code generation and automation assistance for Cisco platforms. These agents automatically fetch the latest API documentation and generate production-ready solutions tailored to your specific needs.
+This MCP server includes specialized AI agents that provide intelligent code generation and automation assistance for Cisco platforms. These experimental agents automatically fetch the latest API documentation and help you code with either simple standalone scripts or enterprise‑level coding guidance.
 
 > Experimental: Agent files and flows are subject to change. Requires VS Code 1.106+ custom agents (see “Chat modes renamed to custom agents”).  
 > https://code.visualstudio.com/updates/v1_106#_chat-modes-renamed-to-custom-agents
@@ -372,7 +372,7 @@ git add .github/agents/meraki-code-assist.agents.md && git commit -m "Add Meraki
 
 **Agent File**: [`.github/agents/meraki-code-assist.agents.md`](./.github/agents/meraki-code-assist.agents.md)
 
-**Description**: Generate comprehensive, production-ready Meraki automation code using the latest API documentation. Specializes in network management, device monitoring, security configuration, and operational reporting.
+**Description (Experimental)**: Generate Meraki automation code using the latest API documentation. Supports two modes: simple standalone scripts or enterprise‑level coding guidance. Specializes in network management, device monitoring, security configuration, and operational reporting.
 
 **Key Capabilities:**
 - **Documentation-First Approach**: Always fetches latest Meraki API documentation before coding
@@ -411,7 +411,7 @@ class MerakiAutomation:
 
 **Agent File**: [`.github/agents/catalyst-center-code-assist.agents.md`](./.github/agents/catalyst-center-code-assist.agents.md)
 
-**Description**: Generate comprehensive, production-ready Cisco Catalyst Center automation code using the latest API documentation. Specializes in enterprise network management, device monitoring, compliance reporting, and operational analytics.
+**Description (Experimental)**: Generate Cisco Catalyst Center automation code using the latest API documentation. Supports two modes: simple standalone scripts or enterprise‑level coding guidance. Specializes in enterprise network management, device monitoring, compliance reporting, and operational analytics.
 
 **Key Capabilities:**
 - **Documentation-First Approach**: Always fetches latest Catalyst Center API documentation before coding
@@ -518,6 +518,9 @@ Agent: [Generates 300+ line enterprise solution with:
 
 ## Troubleshooting and Support
 
+<details>
+<summary><strong>Open troubleshooting guide</strong></summary>
+
 ### When Your AI Assistant Isn't Finding DevNet Content
 
 If your assistant responds with generic networking advice instead of specific Cisco API documentation, try these approaches:
@@ -581,6 +584,8 @@ If you encounter issues or need assistance:
 1. Check that your MCP client is properly configured
 2. Verify your search queries follow the expected format
 3. Contact the DevNet team for service-related issues
+
+</details>
 
 ## License
 
