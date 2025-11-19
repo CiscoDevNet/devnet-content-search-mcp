@@ -17,6 +17,7 @@ This MCP server acts as a bridge between AI-powered development environments and
 - **Rich Documentation Context**: Get complete OpenAPI specifications, code examples, and implementation guides
 - **AI-Optimized Responses**: Structured data format designed for seamless AI assistant integration
 - **Real-time Access**: Direct connection to latest DevNet documentation and API specifications
+- **Specialized AI Agents**: Pre-configured agents for [Catalyst Center Code Assist](#catalyst-center-code-assist-agent) and [Meraki Code Assist](#meraki-code-assist-agent) with intelligent solution complexity options
 - **Expanding Platform Support**: Currently supports Meraki & Catalyst Center APIs, with additional Cisco platforms coming soon
 
 > **Need a specific product API?** [Create an issue](https://github.com/CiscoDevNet/devnet-content-search-mcp/issues) to help us prioritize which APIs to add next!
@@ -343,6 +344,177 @@ Retrieve specific API endpoint details using exact operation identifiers for pre
 - Finding related endpoints and dependencies
 
 </details>
+
+## AI Agents for Enhanced Development
+
+This MCP server includes specialized AI agents that provide intelligent code generation and automation assistance for Cisco platforms. These agents automatically fetch the latest API documentation and generate production-ready solutions tailored to your specific needs.
+
+> Experimental: Agent files and flows are subject to change. Requires VS Code 1.106+ custom agents (see “Chat modes renamed to custom agents”).  
+> https://code.visualstudio.com/updates/v1_106#_chat-modes-renamed-to-custom-agents
+
+### Common Agent Behavior (applies to all agents)
+- Preflight: Check that the DevNet MCP server is installed and reachable; if missing, show one‑click install links and stop.
+- Documentation-first: Call the appropriate search tool first (keyword or operationId) and extract `api_path`, `api_method`, `api_operation_id`, and `documentation_url`.
+- Solution complexity choice: Ask the user whether they want a simple script or an enterprise‑grade solution, then tailor output accordingly.
+- Output: Provide code first, and cite the official `documentation_url`.
+
+### Use these agents in your own repository
+Add the agent file to the active workspace so VS Code can load it:
+
+```bash
+mkdir -p .github/agents
+curl -fsSL -o .github/agents/meraki-code-assist.agents.md \
+  https://raw.githubusercontent.com/CiscoDevNet/devnet-content-search-mcp/main/.github/agents/meraki-code-assist.agents.md
+git add .github/agents/meraki-code-assist.agents.md && git commit -m "Add Meraki Code Assist agent"
+```
+
+### Meraki Code Assist Agent
+
+**Agent File**: [`.github/agents/meraki-code-assist.agents.md`](./.github/agents/meraki-code-assist.agents.md)
+
+**Description**: Generate comprehensive, production-ready Meraki automation code using the latest API documentation. Specializes in network management, device monitoring, security configuration, and operational reporting.
+
+**Key Capabilities:**
+- **Documentation-First Approach**: Always fetches latest Meraki API documentation before coding
+- **Flexible Solution Complexity**: Choose between simple scripts (50-150 lines) or enterprise-grade solutions (300+ lines)
+- **Organization-Wide Operations**: Handle multi-network and multi-organization scenarios
+- **Advanced Features**: Pagination handling, rate limiting, comprehensive error handling
+
+<details>
+<summary><strong>Example Use Cases</strong></summary>
+
+- **Simple Scripts**: "Create a simple script to list all networks in my organization"
+- **Enterprise Solutions**: "Enterprise device fleet management system with full reporting"
+- **Security Management**: "Comprehensive network security compliance framework"
+- **Analytics Platform**: "Complete network analytics platform with dashboard integration"
+  
+</details>
+
+<details>
+<summary><strong>Sample Generated Features</strong></summary>
+
+```python
+# Simple approach - function-based, 50-150 lines
+def get_organization_networks():
+    # Basic API calls, console output
+    
+# Enterprise approach - class-based, 300+ lines
+class MerakiAutomation:
+    def __init__(self, config):
+        # Organization management, bulk operations
+        # Multiple output formats, advanced monitoring
+```
+  
+</details>
+
+### Catalyst Center Code Assist Agent
+
+**Agent File**: [`.github/agents/catalyst-center-code-assist.agents.md`](./.github/agents/catalyst-center-code-assist.agents.md)
+
+**Description**: Generate comprehensive, production-ready Cisco Catalyst Center automation code using the latest API documentation. Specializes in enterprise network management, device monitoring, compliance reporting, and operational analytics.
+
+**Key Capabilities:**
+- **Documentation-First Approach**: Always fetches latest Catalyst Center API documentation before coding
+- **Flexible Solution Complexity**: Choose between simple scripts (50-150 lines) or enterprise-grade solutions (300+ lines)
+- **Enterprise Features**: Advanced error handling, pagination, rate limiting, rollback capabilities
+- **Comprehensive Coverage**: Device management, site health monitoring, template deployment, compliance reporting
+
+<details>
+<summary><strong>Example Use Cases</strong></summary>
+
+- **Simple Scripts**: "Create a simple script to find all unreachable devices"
+- **Enterprise Solutions**: "Enterprise device inventory management system with full reporting"
+- **Template Automation**: "Comprehensive template deployment automation with rollback capabilities"
+- **Compliance Monitoring**: "Advanced compliance monitoring with multiple output formats"
+  
+</details>
+
+<details>
+<summary><strong>Sample Generated Features</strong></summary>
+
+```python
+# Simple approach - function-based, 50-150 lines
+def get_unreachable_devices():
+    # Basic error handling, console output
+    
+# Enterprise approach - class-based, 300+ lines  
+class CatalystCenterAutomation:
+    def __init__(self, config):
+        # Comprehensive error handling, multiple output formats
+        # Authentication management, rate limiting
+```
+  
+</details>
+
+### How to Use the AI Agents
+
+#### In VS Code with GitHub Copilot
+1. Install the DevNet Content Search MCP server (see installation section above)
+2. The agents are automatically available through the MCP integration
+3. Ask questions like:
+   ```
+   Generate a Catalyst Center script to deploy templates across device groups
+   ```
+   ```
+   Create a Meraki automation for managing organization-wide firewall rules
+   ```
+
+#### In Cursor IDE
+1. Install the DevNet Content Search MCP server
+2. The agents work seamlessly with Cursor's AI features
+3. Request specific solutions:
+   ```
+   I need a simple Meraki script to check device status
+   ```
+   ```
+   Build an enterprise Catalyst Center monitoring system
+   ```
+
+#### Key Benefits
+
+**🎯 Solution Complexity Choice**
+- **Always asks first**: "Would you like a simple, focused script or a comprehensive enterprise-grade solution?"
+- **Simple Scripts**: Perfect for learning, quick tasks, and proof-of-concepts
+- **Enterprise Solutions**: Production-ready with comprehensive features and error handling
+
+**📚 Documentation Integration**
+- Automatically fetches latest API documentation
+- Validates API endpoints and parameters
+- Includes official documentation URLs in generated code
+- Ensures compatibility with current API versions
+
+**🏗️ Architecture Flexibility**
+- **Simple**: Function-based approach with linear logic
+- **Enterprise**: Class-based architecture with modular design
+- **Scalable**: Easy upgrade path from simple to enterprise solutions
+
+**🔧 Platform-Specific Features**
+- **Catalyst Center**: Site hierarchy, device groups, template management, compliance reporting
+- **Meraki**: Organization management, network operations, security policies, analytics
+
+### Getting Started with AI Agents
+
+1. **Install MCP Server**: Use the one-click installation links above
+2. **Choose Your Platform**: Catalyst Center or Meraki
+3. **Specify Complexity**: Simple script or enterprise solution
+4. **Describe Your Need**: The agent will generate appropriate code
+
+**Example Interaction:**
+```
+User: "Automate template deployment across device groups in Catalyst Center"
+
+Agent: "Would you like a simple, focused script or a comprehensive enterprise-grade solution?"
+
+User: "Enterprise solution"
+
+Agent: [Generates 300+ line enterprise solution with:
+- Class-based architecture
+- Comprehensive error handling
+- Progress monitoring
+- Rollback capabilities
+- Multiple output formats
+- Rate limiting compliance]
+```
 
 ## Troubleshooting and Support
 
