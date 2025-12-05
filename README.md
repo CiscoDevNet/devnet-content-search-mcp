@@ -407,6 +407,41 @@ class MerakiAutomation:
   
 </details>
 
+#### Predefined Prompts
+
+All predefined prompts are composed on top of the **Meraki Code Assist agent**. These prompts are designed to simplify development by focusing on specific tasks, such as fetching network IDs, scheduling firmware upgrades, or detecting orphan devices. By narrowing the scope of each prompt, developers can quickly generate targeted solutions without unnecessary complexity.
+
+#### Available Prompts
+
+The following prompts are currently available:
+
+- **Detect Orphan Devices**: Identify devices not assigned to any network in a Meraki organization.
+- **Fetch AP Serial Numbers**: Retrieve serial numbers of all Access Points (APs) in a Meraki organization.
+- **Fetch DDNS Names**: Extract DDNS hostnames for devices in a Meraki organization.
+- **Fetch All Network IDs**: Retrieve all network IDs in a Meraki organization.
+- **Schedule Framework Upgrade**: Schedule a framework upgrade for a Meraki network.
+
+#### Using Prompts
+
+To use the prompts, follow these steps:
+
+1. **Locate the Prompt**: Prompts are stored in the `.github/prompts` directory. Each file corresponds to a specific task. You can browse and download them from the [GitHub repository](https://github.com/CiscoDevNet/devnet-content-search-mcp/tree/main/.github/prompts).
+2. **Download the Prompts**: Use the following commands to download all prompts to your local workspace:
+   ```bash
+   mkdir -p .github/prompts
+   for prompt in meraki_fetch_network_ids_python meraki_scheduled_framework_update_python \
+                 meraki_fetch_ddns_python meraki_fetch_ap_serials_python \
+                 meraki_detect_orphan_devices_python; do
+       curl -fsSL -o .github/prompts/${prompt}.prompt.md \
+           https://raw.githubusercontent.com/CiscoDevNet/devnet-content-search-mcp/main/.github/prompts/${prompt}.prompt.md
+   done
+   git add .github/prompts/* && git commit -m "Add Meraki Code Prompts"
+   ```
+3. **Understand the Task**: Open the prompt file to review the task description, requirements, and expected outputs.
+4. **Generate Code**: Use the `meraki-code-assist` agent in the VS Code Copilot chat panel to generate code based on the prompt.
+5. **Test and Validate**: Run the generated or written script to ensure it meets the requirements and produces the expected output.
+
+
 ### Catalyst Center Code Assist Agent
 
 **Agent File**: [`.github/agents/catalyst-center-code-assist.agents.md`](./.github/agents/catalyst-center-code-assist.agents.md)
