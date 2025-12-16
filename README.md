@@ -349,7 +349,10 @@ Retrieve specific API endpoint details using exact operation identifiers for pre
 
 This MCP server includes specialized AI agents that provide intelligent code generation and automation assistance for Cisco platforms. These experimental agents automatically fetch the latest API documentation and help you code with either simple standalone scripts or enterprise‑level coding guidance.
 
-> Experimental: Agent files and flows are subject to change. Requires VS Code 1.106+ custom agents (see “Chat modes renamed to custom agents”).  
+> **⚠️ Important Notice:**  
+> Generative AI may produce inaccurate information regarding sample code, APIs, automation scripts, step-by-step instructions or facts. Please review and test code in test environment.
+
+> Experimental: Agent files and flows are subject to change. Requires VS Code 1.106+ custom agents (see "Chat modes renamed to custom agents").  
 > https://code.visualstudio.com/updates/v1_106#_chat-modes-renamed-to-custom-agents
 
 ### Common Agent Behavior (applies to all agents)
@@ -422,6 +425,9 @@ The following prompts are currently available:
 - **Schedule Framework Upgrade**: Schedule a framework upgrade for a Meraki network.
 
 #### Using Prompts
+
+> **⚠️ Important Notice:**  
+> Generative AI may produce inaccurate information regarding sample code, APIs, automation scripts, step-by-step instructions or facts. Please review and test code in test environment.
 
 To use the prompts, follow these steps:
 
