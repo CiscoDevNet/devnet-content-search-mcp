@@ -27,10 +27,10 @@ test case.
 **If you discover a security bug, please do not report it through GitHub.
 Instead, please see security procedures in [SECURITY.md](/SECURITY.md).**
 
-## Contributing Agents and Prompts
+## Contributing Experimental Agents and Prompts
 
 Agents and Prompts are a great way to extend the usage of `DevNet Content Search MCP Server`. 
-We welcome submissions of agents and prompts that solve specific issues or achieve certain 
+We welcome submissions of experimental agents and prompts that solve specific issues or achieve certain 
 goals by leveraging this MCP server. Before contributing, please review existing agents and 
 prompts to see if your use case is already covered or can be addressed through minor updates.
 
@@ -111,9 +111,6 @@ you can do:
 - Help ensure that existing issues follows the recommendations from the
   _[Reporting Issues](#reporting-issues)_ section, providing feedback to the
   issue's author on what might be missing.
-- Review and update the existing content of our
-  [Wiki](https://github.com/CiscoDevNet/devnet-content-search-mcp/wiki) with up-to-date
-  instructions and code samples.
 - Review existing pull requests, and testing patches against real existing
   applications that use `DevNet Content Search MCP Server`.
 - Write a test, or add a missing test case to an existing test.
