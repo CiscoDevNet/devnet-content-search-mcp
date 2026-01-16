@@ -27,6 +27,71 @@ test case.
 **If you discover a security bug, please do not report it through GitHub.
 Instead, please see security procedures in [SECURITY.md](/SECURITY.md).**
 
+## Contributing Experimental Agents and Prompts
+
+Agents and Prompts are a great way to extend the usage of `DevNet Content Search MCP Server`. 
+We welcome submissions of experimental agents and prompts that solve specific issues or achieve certain 
+goals by leveraging this MCP server. Before contributing, please review existing agents and 
+prompts to see if your use case is already covered or can be addressed through minor updates.
+
+### Submission Guidelines
+
+When submitting an agent or prompt, please follow these requirements:
+
+- **File placement and naming:**
+  - Agent files: `.github/agents/` with naming convention 
+    `{platform}-{purpose}.agents.md`
+  - Prompt files: `.github/prompts/` with naming convention 
+    `{platform}_{task}_{language}.prompt.md`
+
+- **Documentation:**
+  - Provide a clear description of which Cisco platform(s) it targets
+  - Explain the goal and use case this agent/prompt achieves
+  - Document any prerequisites or dependencies
+
+- **API Verification:**
+  - Verify all referenced APIs against official DevNet documentation
+  - Ensure APIs are current and not deprecated
+  - Include API version information if relevant
+
+- **Security:**
+  - Ensure no hardcoded secrets (API keys, passwords, tokens)
+  - Use environment variables or secure configuration methods for sensitive data
+
+- **Testing:**
+  - Test the agent/prompt thoroughly with this MCP server before submission
+  - Document the testing environment and steps
+  - Include example outputs or screenshots when helpful
+
+- **Documentation of limitations:**
+  - Describe any known limitations or edge cases
+  - Note any required setup steps or configuration
+  - Mention any follow-up work or enhancements needed
+
+### Contribution Tips
+
+- **Start simple:** Begin with agents/prompts targeting a single API or workflow 
+  before creating complex multi-step solutions
+- **Follow existing patterns:** 
+  Review existing agents/prompts to match the established style and structure
+- **Provide context:** 
+  Include use case examples showing how your agent/prompt solves a real problem
+- **Make it reusable:** 
+  Design agents/prompts to be adaptable to similar scenarios beyond your specific use case
+- **Engage early:** 
+  If planning a large contribution, consider opening an issue first to discuss the approach
+
+### Review Criteria
+
+Pull requests will be evaluated based on:
+
+- Clarity of documentation and naming
+- Correctness against official API documentation
+- Code/prompt quality and adherence to project standards
+- Absence of security issues or hardcoded credentials
+- Evidence of testing and validation
+- Usefulness to the broader community
+
 ## Sending Pull Requests
 
 Before sending a new pull request, take a look at existing pull requests and
@@ -46,9 +111,6 @@ you can do:
 - Help ensure that existing issues follows the recommendations from the
   _[Reporting Issues](#reporting-issues)_ section, providing feedback to the
   issue's author on what might be missing.
-- Review and update the existing content of our
-  [Wiki](https://github.com/CiscoDevNet/devnet-content-search-mcp/wiki) with up-to-date
-  instructions and code samples.
 - Review existing pull requests, and testing patches against real existing
   applications that use `DevNet Content Search MCP Server`.
 - Write a test, or add a missing test case to an existing test.
