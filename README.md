@@ -1,4 +1,4 @@
-[![Install MCP Server](https://img.shields.io/badge/VS%20Code-Install%20DevNet%20Content%20Search-blue?style=for-the-badge&logo=visualstudiocode)](https://vscode.dev/redirect/mcp/install?name=devnet-content-search&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fdevnet-testing.cisco.com%2Fv1%2Ffoundation-search-mcp%2Fmcp%22%7D) [![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/cn/install-mcp?name=devnet-content-search&config=eyJ0eXBlIjoiaHR0cCIsInVybCI6Imh0dHBzOi8vZGV2bmV0LXRlc3RpbmcuY2lzY28uY29tL3YxL2ZvdW5kYXRpb24tc2VhcmNoLW1jcC9tY3AifQ%3D%3D)
+[![Install MCP Server](https://img.shields.io/badge/VS%20Code-Install%20DevNet%20Content%20Search-blue?style=for-the-badge&logo=visualstudiocode)](https://vscode.dev/redirect/mcp/install?name=devnet-content-search&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fdevnet.cisco.com%2Fv1%2Ffoundation-search-mcp%2Fmcp%22%7D) [![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=devnet-content-search&config=eyJ1cmwiOiJodHRwczovL2Rldm5ldC5jaXNjby5jb20vdjEvZm91bmRhdGlvbi1zZWFyY2gtbWNwL21jcCJ9)
 
 # DevNet Content Search MCP Server
 
@@ -27,7 +27,7 @@ This MCP server acts as a bridge between AI-powered development environments and
 ### VS Code with Copilot
 
 **One-Click Installation:**   
-[![Install MCP Server](https://img.shields.io/badge/VS%20Code-Install%20DevNet%20Content%20Search-blue?style=for-the-badge&logo=visualstudiocode)](https://vscode.dev/redirect/mcp/install?name=devnet-content-search&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fdevnet-testing.cisco.com%2Fv1%2Ffoundation-search-mcp%2Fmcp%22%7D)
+[![Install MCP Server](https://img.shields.io/badge/VS%20Code-Install%20DevNet%20Content%20Search-blue?style=for-the-badge&logo=visualstudiocode)](https://vscode.dev/redirect/mcp/install?name=devnet-content-search&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fdevnet.cisco.com%2Fv1%2Ffoundation-search-mcp%2Fmcp%22%7D)
 
 <details>
 <summary>Manual Configuration</summary>
@@ -35,7 +35,7 @@ This MCP server acts as a bridge between AI-powered development environments and
 1. Open VS Code Command Palette: `Cmd+Shift+P` (Mac) or `Ctrl+Shift+P` (Windows/Linux)
 2. Type and select: `MCP: Add Server`
 3. Choose Server Type: `HTTP`
-4. Enter Server URL: `https://devnet-testing.cisco.com/v1/foundation-search-mcp/mcp`
+4. Enter Server URL: `https://devnet.cisco.com/v1/foundation-search-mcp/mcp`
 5. Set Server ID: `devnet-content-search`
 6. Restart VS Code to activate the server
 
@@ -52,7 +52,7 @@ Find Meraki L3 firewall API endpoints for configuring traffic rules
 ### Cursor IDE
 
 **One-Click Installation:**  
-[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/cn/install-mcp?name=devnet-content-search&config=eyJ0eXBlIjoiaHR0cCIsInVybCI6Imh0dHBzOi8vZGV2bmV0LXRlc3RpbmcuY2lzY28uY29tL3YxL2ZvdW5kYXRpb24tc2VhcmNoLW1jcC9tY3AifQ%3D%3D)
+[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=devnet-content-search&config=eyJ1cmwiOiJodHRwczovL2Rldm5ldC5jaXNjby5jb20vdjEvZm91bmRhdGlvbi1zZWFyY2gtbWNwL21jcCJ9)
 
 <details>
 <summary>Manual Configuration</summary>
@@ -64,7 +64,7 @@ Find Meraki L3 firewall API endpoints for configuring traffic rules
    {
      "mcpServers": {
        "devnet-content-search": {
-         "url": "https://devnet-testing.cisco.com/v1/foundation-search-mcp/mcp"
+         "url": "https://devnet.cisco.com/v1/foundation-search-mcp/mcp"
        }
      }
    }
@@ -83,7 +83,7 @@ Add this configuration to your MCP client's `config.json`:
 {
   "mcpServers": {
     "devnet-content-search": {
-      "url": "https://devnet-testing.cisco.com/v1/foundation-search-mcp/mcp"
+      "url": "https://devnet.cisco.com/v1/foundation-search-mcp/mcp"
     }
   }
 }

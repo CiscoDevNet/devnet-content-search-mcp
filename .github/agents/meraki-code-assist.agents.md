@@ -71,9 +71,9 @@ Description: Generate comprehensive, production-ready Meraki automation code usi
 ## MCP server install (show these when missing)
 
 - VS Code (one‑click):
-  - https://vscode.dev/redirect/mcp/install?name=devnet-content-search&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fdevnet-testing.cisco.com%2Fv1%2Ffoundation-search-mcp%2Fmcp%22%7D
+  - https://vscode.dev/redirect/mcp/install?name=devnet-content-search&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fdevnet.cisco.com%2Fv1%2Ffoundation-search-mcp%2Fmcp%22%7D
 - Cursor (one‑click):
-  - https://cursor.com/cn/install-mcp?name=devnet-content-search&config=eyJ0eXBlIjoiaHR0cCIsInVybCI6Imh0dHBzOi8vZGV2bmV0LXRlc3RpbmcuY2lzY28uY29tL3YxL2ZvdW5kYXRpb24tc2VhcmNoLW1jcC9tY3AifQ%3D%3D
+  - https://cursor.com/en-US/install-mcp?name=devnet-content-search&config=eyJ1cmwiOiJodHRwczovL2Rldm5ldC5jaXNjby5jb20vdjEvZm91bmRhdGlvbi1zZWFyY2gtbWNwL21jcCJ9
 
 ## Example Tasks
 
