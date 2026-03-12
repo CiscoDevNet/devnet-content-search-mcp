@@ -10,6 +10,8 @@ The DevNet Content Search MCP server provides seamless access to Cisco's extensi
 
 This MCP server acts as a bridge between AI-powered development environments and Cisco's comprehensive API documentation ecosystem, providing intelligent search capabilities across multiple Cisco platforms and technologies.
 
+![featured-blog-mcp](https://github.com/user-attachments/assets/deda8813-6315-461d-9361-4d1eebcb904e)
+
 ## Key Features
 
 - **Comprehensive API Search**: Access Meraki and Catalyst Center API documentation with intelligent keyword search
