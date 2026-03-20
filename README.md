@@ -74,6 +74,94 @@ Find Meraki L3 firewall API endpoints for configuring traffic rules
 
 </details>
 
+### Claude Desktop
+
+<details>
+<summary>Manual Configuration</summary>
+
+1. Open your Claude Desktop configuration file:
+   - **Mac**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+   - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+2. Add the following entry to the `mcpServers` section:
+   ```json
+   {
+     "mcpServers": {
+       "devnet-content-search": {
+         "command": "npx",
+         "args": [
+           "mcp-remote@latest",
+           "https://devnet.cisco.com/v1/foundation-search-mcp/mcp"
+         ]
+       }
+     }
+   }
+   ```
+3. Save the file and restart Claude Desktop
+4. The DevNet Content Search tool will now be available in your Claude conversations
+
+</details>
+
+### Claude Code
+
+<details>
+<summary>Manual Configuration</summary>
+
+1. Add the MCP server to your Claude Code configuration by running:
+   ```bash
+   claude mcp add devnet-content-search --transport http https://devnet.cisco.com/v1/foundation-search-mcp/mcp
+   ```
+2. Verify the server was added successfully:
+   ```bash
+   claude mcp list
+   ```
+3. The DevNet Content Search tools will now be available in your Claude Code sessions
+
+</details>
+
+### LibreChat
+
+<details>
+<summary>Manual Configuration</summary>
+
+1. Open your LibreChat configuration file `librechat.yaml` in the root of your LibreChat installation
+2. Add the following under the `mcpServers` section:
+   ```yaml
+   mcpServers:
+     devnet-content-search:
+       type: http
+       url: https://devnet.cisco.com/v1/foundation-search-mcp/mcp
+   ```
+3. Save the file and restart your LibreChat instance
+4. The DevNet Content Search tools will be available to agents and assistants configured in LibreChat
+
+</details>
+
+### JetBrains IDEs
+
+<details>
+<summary>Manual Configuration</summary>
+
+1. Open **Settings** (`Cmd+,` on Mac or `Ctrl+Alt+S` on Windows/Linux)
+2. Navigate to **Tools** → **AI Assistant** → **Model Context Protocol (MCP)**
+3. Click the **+** button to add a new server and configure:
+   ```json
+   {
+     "mcpServers": {
+       "devnet-content-search": {
+         "command": "npx",
+         "args": [
+           "mcp-remote@latest",
+           "https://devnet.cisco.com/v1/foundation-search-mcp/mcp"
+         ]
+       }
+     }
+   }
+   ```
+4. Click **Apply** → **OK** and restart your IDE
+5. The DevNet Content Search tools will now be available in the AI Assistant chat panel
+
+</details>
+
 ### Other MCP-Compatible Clients
 
 This server follows the standard MCP protocol and works with any compatible client. For implementation details, refer to the MCP specification.
