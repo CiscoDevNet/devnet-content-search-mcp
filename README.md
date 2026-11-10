@@ -301,6 +301,132 @@ Find network topology discovery APIs for Catalyst Center
 How do I manage campus and branch locations in Catalyst Center?
 ```
 
+### ThousandEyes Specific Examples
+
+```
+Show me how to create and manage tests with the ThousandEyes v7 API
+```
+
+```
+Find APIs for retrieving network and path visualization test results in ThousandEyes
+```
+
+```
+How do I list Cloud and Enterprise Agents and assign them to tests in ThousandEyes?
+```
+
+### Intersight Specific Examples
+
+```
+How do I authenticate to the Intersight API using API keys and HTTP signatures?
+```
+
+```
+Find APIs for retrieving physical server inventory and compute summaries in Intersight
+```
+
+```
+Show me how to create and deploy server profiles with the Intersight API
+```
+
+### Security Cloud Control Specific Examples
+
+```
+How do I generate an API token and authenticate to Security Cloud Control?
+```
+
+```
+Find APIs for onboarding and managing FTD and ASA devices in Security Cloud Control
+```
+
+```
+Show me how to manage network objects and access policies with the Security Cloud Control API
+```
+
+### Secure Access Specific Examples
+
+```
+How do I generate an API key and get an OAuth 2.0 access token for Cisco Secure Access?
+```
+
+```
+Find APIs for creating and managing access rules and destination lists in Secure Access
+```
+
+```
+Show me reporting APIs for DNS activity and top threats in Cisco Secure Access
+```
+
+### ISE Specific Examples
+
+```
+Show me ERS and OpenAPI authentication setup for Cisco ISE
+```
+
+```
+Find APIs for adding and managing network access devices in ISE
+```
+
+```
+How do I create guest users and manage endpoints with the ISE API?
+```
+
+### CML Specific Examples
+
+```
+How do I create a lab and import a topology YAML file in Cisco Modeling Labs?
+```
+
+```
+Find documentation on using the virl2_client Python library with CML
+```
+
+```
+Show me how to add custom node definitions and images in CML
+```
+
+### Crosswork AI Specific Examples
+
+```
+How do I create and run AI agents and tasks with the Crosswork AI API?
+```
+
+```
+Find APIs for configuring LLM and model providers in Crosswork AI
+```
+
+```
+Show me how to set up Data Retrieval Adapters and MCP tools in Crosswork AI
+```
+
+### Cyber Vision Specific Examples
+
+```
+How do I generate an API token and authenticate to the Cyber Vision API?
+```
+
+```
+Find APIs for retrieving OT device inventory and vulnerabilities in Cyber Vision
+```
+
+```
+Show me how to query network activities and flows with the Cyber Vision API
+```
+
+### Catalyst SD-WAN Manager Specific Examples
+
+```
+How do I authenticate to SD-WAN Manager using a session cookie and XSRF token?
+```
+
+```
+Find device inventory and monitoring APIs for Catalyst SD-WAN Manager
+```
+
+```
+Show me how to manage configuration groups and templates with the SD-WAN Manager API
+```
+
 ### Pro Tips for Better Results
 
 **✅ Be Specific**: "L3 firewall rules" → Better than "firewall"  
